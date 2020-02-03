@@ -25,6 +25,10 @@ app.use(function validateBearerToken(req, res, next) {
   next()
 })
 
+app.get('', function handleHomePage(req, res) {
+  res.send('heyyo')
+})
+
 const validTypes = [`Bug`, `Dark`, `Dragon`, `Electric`, `Fairy`, `Fighting`, `Fire`, `Flying`, `Ghost`, `Grass`, `Ground`, `Ice`, `Normal`, `Poison`, `Psychic`, `Rock`, `Steel`, `Water`]
 
 app.get('/types', function handleGetTypes(req, res) {
